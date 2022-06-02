@@ -1,0 +1,21 @@
+[package]
+name = "atomic-actor"
+version = "0.1.0"
+edition = "2021"
+description = "An `Actor` with `async fn` handlers."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/chubei-oppen/atomic-actor"
+keywords = ["actix", "actor", "async"]
+categories = ["asynchronous", "rust-patterns"]
+readme = "../README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.53"
+futures = "0.3.21"
+pin-project = "1.0.10"
+tokio = { version = "1.18.2", features = ["rt", "sync"] }
+
+[dev-dependencies]
+tokio = { version = "1.18.2", features = ["rt-multi-thread", "macros"] }

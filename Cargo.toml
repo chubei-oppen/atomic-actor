@@ -1,5 +1,5 @@
 [package]
-name = "cargo-pre-commit"
+name = "atomic-actor"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,3 +7,10 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1"
+async-trait = "0.1.53"
+futures = "0.3.21"
+pin-project = "1.0.10"
+tokio = { version = "1.18.2", features = ["rt", "sync"] }
+
+[dev-dependencies]
+tokio = { version = "1.18.2", features = ["rt-multi-thread", "macros"] }
